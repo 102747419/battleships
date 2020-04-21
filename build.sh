@@ -45,7 +45,7 @@ SG_INC="-I${APP_PATH}/lib/"
 
 #Locate the compiler...
 if [ "$OS" = "$WIN" ]; then
-    export PATH=$APP_PATH/lib:/c/Program\ Files\ \(x86\)/Mono/bin/:/c/Program\ Files/Mono/bin/:$PATH:/c/Windows/Microsoft.NET/Framework/v4.0.30319
+    export PATH=$APP_PATH/lib:/c/Program%20Files%20\(x86\)/Mono/bin/:/c/Program%20Files/Mono/bin/:$PATH:/c/Windows/Microsoft.NET/Framework/v4.0.30319
     
     VBNC_BIN=`which vbc 2>> /dev/null`
 else
