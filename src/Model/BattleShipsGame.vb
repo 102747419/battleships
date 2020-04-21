@@ -82,8 +82,8 @@ Public Class BattleShipsGame
 
         RaiseEvent AttackCompleted(Me, newAttack)
 
-        'change player if the last hit was a miss
-        If newAttack.Value = ResultOfAttack.Miss Then
+        'change player
+        If newAttack.Value = ResultOfAttack.Miss or newAttack.Value = ResultOfAttack.Hit or newAttack.Value = ResultOfAttack.Destroyed Then
             _playerIndex = otherPlayer
         End If
 

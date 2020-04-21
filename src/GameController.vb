@@ -1,4 +1,5 @@
 Imports SwinGameSDK
+Imports System
 
 ''' <summary>
 ''' The GameController is responsible for controlling the game,
@@ -228,7 +229,7 @@ Public Module GameController
     ''' to the AI player.</remarks>
     Private Sub CheckAttackResult(ByVal result As AttackResult)
         Select Case result.Value
-            Case ResultOfAttack.Miss
+            Case ResultOfAttack.Miss, ResultOfAttack.Hit, ResultOfAttack.Destroyed
                 If _theGame.Player Is ComputerPlayer Then AIAttack()
             Case ResultOfAttack.GameOver
                 SwitchState(GameState.EndingGame)
