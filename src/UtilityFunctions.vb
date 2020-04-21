@@ -113,6 +113,7 @@ Module UtilityFunctions
                 Dim fillColor As Color
                 Dim draw As Boolean
 
+				fillColor = SwinGame.RGBAColor(1, 0, 0, 0)
                 draw = True
 
                 Select Case grid.Item(row, col)
@@ -125,6 +126,8 @@ Module UtilityFunctions
                         If small Then fillColor = SMALL_HIT Else fillColor = LARGE_HIT
                     Case TileView.Sea, TileView.Ship
                         If small Then fillColor = SMALL_SEA Else draw = False
+					Case Else
+						draw = False
                 End Select
 
                 If draw Then
